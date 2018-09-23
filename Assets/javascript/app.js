@@ -68,14 +68,25 @@ function displayGif() {
             // Function that pauses and plays gifs
             $(".gif").on("click", function () {
 
+                // Varisble to hold data-state
                 var state = $(this).attr("data-state");
                 
+                // If statement to check if data-state is equal to still
                 if (state === "still") {
-                    $(this).attr("src", $(this).attr("data-animate"));
+
+                    // Change data-state attribute to animate
                     $(this).attr("data-state", "animate");
+
+                    // Change image source value of data-animate
+                    $(this).attr("src", $(this).attr("data-animate"));
+
                   } else {
-                    $(this).attr("src", $(this).attr("data-still"));
+
+                    // Change data-state attribute to still
                     $(this).attr("data-state", "still");
+
+                    // Change image source to value of data-still
+                    $(this).attr("src", $(this).attr("data-still"));
                   }
             });
            
